@@ -2,7 +2,7 @@ import './css/styles.css';
 import { fetchBreeds, fetchCatByBreed } from './js/cat-api';
 import Notiflix from '../node_modules/notiflix';
 
-elements = {
+const elements = {
     breedSelect: document.querySelector('.breed-select'),
     catInfo: document.querySelector('.cat-info'),
     loaderText: document.querySelector('.loader'),
@@ -38,7 +38,6 @@ elements.breedSelect.addEventListener('change', (e) => {
     
     const value = e.target.value;
 
-    console.log(elements.breedSelect);
   fetchCatByBreed(value)
     .then(catData => {
       elements.loaderText.classList.add("invisible");
