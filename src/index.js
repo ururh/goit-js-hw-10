@@ -1,6 +1,6 @@
 import './css/styles.css';
 import { fetchBreeds, fetchCatByBreed } from './js/cat-api';
-import Notiflix from 'notiflix';
+import Notiflix from '../node_modules/notiflix';
 
 elements = {
     breedSelect: document.querySelector('.breed-select'),
@@ -8,7 +8,6 @@ elements = {
     loaderText: document.querySelector('.loader'),
     errorText: document.querySelector('.error')
 }
-
 
 elements.loaderText.classList.add("invisible");
 elements.errorText.classList.add("invisible")
