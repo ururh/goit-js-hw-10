@@ -1,0 +1,118 @@
+h2 {
+    font-size: 26px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h3 {
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.cat-img{
+    box-shadow: -15px 13px 18px -10px #959cb7;
+}
+.cat-info {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+}
+
+.cat-info p {
+    width: 600px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.loader {
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 0px 35px 0 -5px #aaa, 0 -5px 0 0px #ddd, 0 -25px 0 -5px #fff,
+        -25px -30px 0 0px #ddd, -25px 30px 0 0px #ddd, 25px -30px 0 0px #ddd,
+        25px 30px 0 0px #ddd, 20px 10px 0 5px #ddd, 20px -10px 0 5px #ddd,
+        -20px -10px 0 5px #ddd, -20px 10px 0 5px #ddd;
+}
+
+.loader:after,
+.loader:before {
+    content: "";
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    display: block;
+    position: absolute;
+    border: 4px dashed #fff;
+    bottom: -4px;
+    transform: rotate(0deg);
+    box-sizing: border-box;
+    animation: tape 4s linear infinite;
+}
+
+.loader:before {
+    right: 0;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 34px #000;
+}
+
+.loader:after {
+    left: 0;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 65px #000;
+}
+
+@keyframes tape {
+    0% {
+        transform: rotate(0deg) scale(0.4);
+    }
+
+    100% {
+        transform: rotate(-360deg) scale(0.4);
+    }
+}
+
+select {
+
+    /* styling */
+    background-color: white;
+    border: thin solid blue;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+
+    /* reset */
+
+    margin-bottom: 40px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* arrows */
+
+select.breed-select {
+    background-image:
+        linear-gradient(45deg, transparent 50%, blue 50%),
+        linear-gradient(135deg, blue 50%, transparent 50%),
+        linear-gradient(to right, skyblue, skyblue);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        100% 0;
+    background-size:
+        5px 5px,
+        5px 5px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+}
